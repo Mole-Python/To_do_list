@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body{
+  background: linear-gradient(120deg, #00AAFF, #00FF6c);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header{
+  font-size: 1.5rem;
+  /* min-height: 10vh;  */
+  /* justify-content: center; */
+  /* align-items: center; */
+  text-align: center;
+}
+
+/* #date{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+} */
+
+form{
+  min-height: 20vh;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+form input,
+form button{
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+form input{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+}
+
+form button{
+  color:#00AAFF;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px
+}
+
+form button:hover{
+  background: #00AAFF;
+  color: white;
+  outline: none;
+}
+
+.todo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+.todo-list{
+  min-width: 30%;
+  list-style: none;
+
+}
+
+.todo{
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+}
+
+.todo li{
+  flex: 1;
+}
+
+.trash-btn, .complete-btn{
+  background: #00AAFF;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.trash-btn{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  outline: none;
+}
+
+.complete-btn{
+  background: #00FF6c;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+}
+
+.todo-item{
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check{
+pointer-events: none;
+}
+
+.completed{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* selection styling */
+select{
+  -webkit-apperance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #00AAFF;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+
+.select{
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.select::after{
+  content: "\25BC";
+  position: absolute;
+  background: #00FF6c;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+
+}
+
+.select:hover::after{
+  background: white;
+  color: #00FF6c;
+}
